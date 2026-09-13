@@ -1,4 +1,6 @@
-const workbookFile = 'Taipei_Travel_Planner.xlsx';
+const workbookFile = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+  ? 'docs/Taipei_Travel_Planner.xlsx'
+  : 'Taipei_Travel_Planner.xlsx';
 const storageKey = 'taipei-travel-planner-edits';
 const rateCacheKey = 'taipei-budget-rate-daily';
 const rateApiUrl = 'https://open.er-api.com/v6/latest/TWD';
