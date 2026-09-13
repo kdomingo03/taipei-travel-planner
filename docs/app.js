@@ -1,4 +1,4 @@
-const workbookFile = 'docs/Taipei_Travel_Planner.xlsx';
+const workbookFile = 'Taipei_Travel_Planner.xlsx';
 const storageKey = 'taipei-travel-planner-edits';
 const rateCacheKey = 'taipei-budget-rate-daily';
 const rateApiUrl = 'https://open.er-api.com/v6/latest/TWD';
