@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taipei Travel Planner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=22">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top"><span>TAIPEI</span> / TRIP DESK</a>
+    <nav id="sheetNav" aria-label="Planner sections"></nav>
+    <div class="workbook-actions"><label class="file-button">Open workbook<input id="workbookInput" type="file" accept=".xlsx,.xls"></label><button id="exportWorkbook" class="file-button export-button" type="button">Export workbook</button></div>
+  </header>
+  <main id="top">
+    <section class="hero"><div><p class="eyebrow">Personal travel command center</p><h1>Taipei,<br><em>ready when you are.</em></h1><p class="intro">Your itinerary, bookings, budget, documents, and packing list in one calm place.</p><a class="primary-link" href="#planner">Open the planner <span aria-hidden="true">↘</span></a></div><div class="hero-stamp"><strong id="sheetCount">7</strong><span>workbook<br>sections</span></div></section>
+    <section class="summary" id="summary" aria-label="Trip summary"><p class="eyebrow">At a glance</p><div class="summary-grid" id="summaryGrid"></div><div class="countdown" aria-live="polite"><span>Countdown to departure</span><strong id="countdownValue">Loading...</strong><small id="countdownDate">March 16, 2027</small></div></section>
+    <section class="planner" id="planner"><div class="section-heading"><div><p class="eyebrow">Live workbook view</p><h2 id="activeTitle">Master Itinerary</h2></div><div class="view-tools"><label class="search"><span aria-hidden="true">⌕</span><input id="tableSearch" type="search" placeholder="Search this section" aria-label="Search this section"></label><button id="resetData" type="button">Reset saved changes</button></div></div><div class="sheet-tabs" id="sheetTabs" role="tablist" aria-label="Workbook sections"></div><div class="table-shell"><div id="tableMeta" class="table-meta"></div><div id="tableMount" class="table-wrap"></div></div></section>
+  </main>
+  <footer><span>TAIPEI / TRIP DESK</span><span>Built from Taipei_Travel_Planner.xlsx</span><a href="#top">Back to top ^</a></footer>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+    <script src="app.js?v=22"></script>
+<script src="countdown.js"></script>
+</body>
+</html>
